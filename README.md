@@ -148,14 +148,4 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
 ** no instance found **
 (hbnb) quit
-```
-
-## Bugs
-No known bugs at this time. 
-
-## Authors
-Amure McDonald - [Github](https://github.com/Certifieddonnie) / [Twitter](https://twitter.com/CertfiedDonnie)  
-
-Second part of Airbnb: 
-## License
-Public Domain. No copy write protection. 
+``` 
