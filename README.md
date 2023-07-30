@@ -149,3 +149,11 @@ EOF  all  create  destroy  help  quit  show  update
 ** no instance found **
 (hbnb) quit
 ``` 
+
+## AUTHOR1
+NAME: Emmanuel Ofori
+EMAIL: emmo800gh@gmail.com
+
+## AUTHOR2
+NAME: Bright Effah
+EMAIL: effahbright.eb@gmail.com
