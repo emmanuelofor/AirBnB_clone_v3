@@ -1,33 +1,28 @@
 #!/usr/bin/python3
-'''
-    Flask application with general routes:
-        /status:    returns "status":"OK"
-        /stats:     returns total count of all classes
-'''
+""" routing File """
 from api.v1.views import app_views
-from flask import jsonify
+from flask import Flask, jsonify
 from models import storage
 
 
-@app_views.route("/status")
+@app_views.route('/status', strict_slashes=False)
 def status():
-    '''
-        Returns a JSON object indicating a successful status
-    '''
-    return jsonify({'status': 'OK'})
+    """
+    Returns a JSON status
+    """
+    return jsonify({"status": "OK"})
 
 
-@app_views.route("/stats")
-def storage_counts():
-    '''
-        Retrieves and returns counts of all class instances in storage
-    '''
-    cls_counts = {
+@app_views.route('/stats', strict_slashes=False)
+def count():
+    """
+    Retrieves the number of each objects by type.
+    """
+    return jsonify({
         "amenities": storage.count("Amenity"),
         "cities": storage.count("City"),
         "places": storage.count("Place"),
         "reviews": storage.count("Review"),
         "states": storage.count("State"),
         "users": storage.count("User")
-    }
-    return jsonify(cls_counts)
+    })
